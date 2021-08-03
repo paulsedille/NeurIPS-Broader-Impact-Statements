@@ -1,3 +1,5 @@
+Google Sheet version available [here](https://docs.google.com/spreadsheets/d/1pG6s1GSp5EsioxBNKygunq6cCuEfsRMBglveLMXDo-c/edit#gid=1937130730).
+
 # Steps taken in creating the variables
 
 The Broader Impact Statement data was collected from the papers listed in NeurIPS 2020 proceedings website. 1899 paper PDFs were downloaded in November 2021. One paper was later taken down from the website and has therefore been removed from the dataset, which now includes 1898 papers. The PDFs were then converted to XML using the PDFX academic web tool. The conversion resulted in 1891 xmls, 1890 discounting the paper that was later removed. Eight of the 1899 original PDFs were image-based PDFs and had to be hand coded.
