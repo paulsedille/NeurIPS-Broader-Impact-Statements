@@ -66,9 +66,6 @@ Variable provided by NeurIPS team.
 ## clustering subject preference
 Variable provided by NeurIPS team.
 
-## authors
-Extracted from [this dataset](https://github.com/nd7141/icml2020/blob/master/neurips_2020_accepted.txt).
-
 ## affiliations
 Extracted from [this dataset](https://github.com/nd7141/icml2020/blob/master/neurips_2020_accepted.txt).
 
