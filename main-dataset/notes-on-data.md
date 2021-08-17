@@ -55,16 +55,16 @@ Whether or not the text of the broader impact statement or other variables were 
 Eight of the 1899 originally downloaded PDFs were image-based and could not be converted to XMLs. They therefore had to be hand coded. Those papers are coded as TRUE for this variable, all others are coded as FALSE.
 
 ## paper title (subjects)
-Variable provided by NeurIPS team.
+Variable provided by NeurIPS team, cf. [this dataset](https://docs.google.com/spreadsheets/d/10HHHgXGAwsoeF6XxX0ZTJUAvixMO2NedcHrPnFm6JfQ/edit?usp=sharing).
 
 ## primary subject area
-Variable provided by NeurIPS team.
+Variable provided by NeurIPS team, cf. [this dataset](https://docs.google.com/spreadsheets/d/10HHHgXGAwsoeF6XxX0ZTJUAvixMO2NedcHrPnFm6JfQ/edit?usp=sharing).
 
 ## secondary subject areas
-Variable provided by NeurIPS team.
+Variable provided by NeurIPS team, cf. [this dataset](https://docs.google.com/spreadsheets/d/10HHHgXGAwsoeF6XxX0ZTJUAvixMO2NedcHrPnFm6JfQ/edit?usp=sharing).
 
 ## clustering subject preference
-Variable provided by NeurIPS team.
+Variable provided by NeurIPS team, cf. [this dataset](https://docs.google.com/spreadsheets/d/10HHHgXGAwsoeF6XxX0ZTJUAvixMO2NedcHrPnFm6JfQ/edit?usp=sharing).
 
 ## affiliations
 Extracted from [this dataset](https://github.com/nd7141/icml2020/blob/master/neurips_2020_accepted.txt).
