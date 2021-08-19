@@ -1,5 +1,9 @@
 Google Sheet version available [here](https://docs.google.com/spreadsheets/d/1pG6s1GSp5EsioxBNKygunq6cCuEfsRMBglveLMXDo-c/edit#gid=1937130730).
 
+# Limitations
+
+This dataset has limitations that should be taken into consideration when using it. In particular, the method used to collect broader impact statements involved automated downloads, conversions and scraping and was not error-proof (see below for details). Although care has been taken to identify and correct as many errors as possible, not all texts have been reviewed by a human. This means it is possible some of the broader impact statements contained in the dataset are truncated or otherwise incorrectly extracted from their original article. 
+
 # Steps taken in creating the variables
 
 The Broader Impact Statement data was collected from the papers listed in NeurIPS 2020 proceedings [website](https://proceedings.neurips.cc/). 1899 paper PDFs were downloaded in November 2021. One paper was later taken down from the website and has therefore been removed from the dataset, which now includes 1898 papers. The PDFs were then converted to XML using the PDFX academic [web tool](http://pdfx.cs.man.ac.uk/). The conversion resulted in 1891 xmls, 1890 discounting the paper that was later removed. Eight of the 1899 original PDFs were image-based PDFs and had to be hand coded.
@@ -8,17 +12,17 @@ The 1890 xml files were parsed using the “scrapping.py” code on [this github
 
 Unfortunately, the PDF to XML conversion process is prone to coding errors that make the resulting xml files impossible to reliably parse for every paper’s impact statement and related variables. In order to minimise errors, the code was altered multiple times to attempt to accurately scrape as many impact statements as possible (accounting for as many of the ways in which impact statements are coded in the xml files as possible, or for the fact some of them were spread across more than one page, included images and/or tables, etc.). Each new iteration of the code was compared with the original one so as to identify and correct any remaining errors. This process was repeated until the new code outputs did not help locate any new errors in the main database. 
 
-Paper subject data was pulled in from a dataset provided by NeurIPS linking paper titles to their primary and secondary subject areas and “clustering preference.” Authors and affiliations were extracted from [this dataset](https://github.com/nd7141/icml2020/blob/master/neurips_2020_accepted.txt) containing paper titles, authors, and affiliations and matched to papers based first on title, then on authors. Due to title discrepancies, some papers had to be manually matched. Authors for which no affiliation was listed were manually looked up. Affiliation type utilized [this dataset](https://docs.google.com/spreadsheets/d/1CT3hCvbKxyJeS1FdrZtlK5MTuvWsfXR_/edit#gid=255761468). Not all affiliations were present; anything containing “University” was automatically categorized as “Academic.” Approximately 600 other affiliations present in the papers were not listed in the dataset; these were manually categorized. Country-level affiliation location used [this dataset](https://github.com/nd7141/icml2020/blob/master/university2.csv). Again, not every affiliation was included, so manual lookups filled in the gaps. For affiliations with multinational corporations for which no narrower location was given (e.g. Google), the location of their headquarters was used. 
+Paper subject data was pulled in from a [dataset](https://docs.google.com/spreadsheets/d/10HHHgXGAwsoeF6XxX0ZTJUAvixMO2NedcHrPnFm6JfQ/edit?usp=sharing) provided by NeurIPS, linking paper titles to their primary and secondary subject areas and “clustering preference” as selected by authors. Authors and affiliations were extracted from [this dataset](https://github.com/nd7141/icml2020/blob/master/neurips_2020_accepted.txt) containing paper titles, authors, and affiliations and matched to papers based first on title, then on authors. Due to title discrepancies, some papers had to be manually matched. Authors for which no affiliation was listed were manually looked up. Affiliation type utilized [this dataset](https://docs.google.com/spreadsheets/d/1CT3hCvbKxyJeS1FdrZtlK5MTuvWsfXR_/edit#gid=255761468). Not all affiliations were present; anything containing “University” was automatically categorized as “Academic.” Approximately 600 other affiliations present in the papers were not listed in the dataset; these were manually categorized. Country-level affiliation location used [this dataset](https://github.com/nd7141/icml2020/blob/master/university2.csv). Again, not every affiliation was included, so manual lookups filled in the gaps. For affiliations with multinational corporations for which no narrower location was given (e.g. Google), the location of their headquarters was used. 
 
 
 ## paper title (separate scrape)
-Paper title scraped from the NeurIPS 2020 proceedings website [main page](https://proceedings.neurips.cc/paper/2020).
+Paper title scraped from the NeurIPS 2020 proceedings website [main page](https://proceedings.neurips.cc/paper/2020). This variable may have been manually corrected.
 
 ## paper authors (separate scrape)
-Paper title scraped from the NeurIPS 2020 proceedings website [main page](https://proceedings.neurips.cc/paper/2020).
+Paper authors scraped from the NeurIPS 2020 proceedings website [main page](https://proceedings.neurips.cc/paper/2020). This variable may have been manually corrected.
 
 ## title
-Paper title scraped from the PDF papers after XML conversion.
+Paper title scraped from the PDF papers after XML conversion. This variable may have been manually corrected.
 
 ## paper identifier
 Paper identifier scraped from the PDF papers’ url on the NeurIPS 2020 proceedings website, based off of this repeated pattern in every paper’s URL: "[IDENTIFIER]-Paper.pdfx.xml"
@@ -27,16 +31,16 @@ Paper identifier scraped from the PDF papers’ url on the NeurIPS 2020 proceedi
 Paper URL scraped from the papers’ PDF page on the NeurIPS 2020 proceedings website.
 
 ## impact statement
-Text of the paper’s broader impact statement scraped from the XML database using the code on [this github repository](https://github.com/paulsedille/NeurIPS-Broader-Impact-Statements).
+Text of the paper’s broader impact statement scraped from the XML database using the code on [this github repository](https://github.com/paulsedille/NeurIPS-Broader-Impact-Statements). This variable may have been manually corrected.
 
 ## impact title
-Title of the paper’s broader impact statement scraped from the XML database using the code on [this github repository](https://github.com/paulsedille/NeurIPS-Broader-Impact-Statements).
+Title of the paper’s broader impact statement scraped from the XML database using the code on [this github repository](https://github.com/paulsedille/NeurIPS-Broader-Impact-Statements). This variable may have been manually corrected.
 
 ## word count
-The word count of the text of the broader impact statement.
+The word count of the text of the broader impact statement. This variable may have been manually corrected.
 
 ## sentence count
-The sentence count of the text of the broader impact statement, obtained using the [NLTK package](https://www.nltk.org/) and corrected for miscounts (“e.g. ” and “i.e. ”) using [this code](https://github.com/paulsedille/NeurIPS-Broader-Impact-Statements/academic-pdf-scrap/tree/sentences/functions).
+The sentence count of the text of the broader impact statement, obtained using the [NLTK package](https://www.nltk.org/) and corrected for miscounts (“e.g. ” and “i.e. ”) using [this code](https://github.com/paulsedille/NeurIPS-Broader-Impact-Statements/academic-pdf-scrap/tree/sentences/functions). This variable may have been manually corrected.
 
 ## opt out
 Whether or not the broader impact statement was considered to be an “opt out” (authors do not believe their work has any foreseeable societal consequence and that a discussion of broader impacts is generally not applicable) according to a human reviewer. As much as possible, consistent principles were used. In particular, many authors note their work is “theoretical” or “foundational” but this alone was not enough for the statement to be counted as an opt out. In addition, many authors only consider the benefits of their work on the scientific/research community (usually only the AI/ML community) without considering impacts beyond this, but this was not counted as an opt out unless authors explicitly noted their work did not have broader social or ethical impacts.
@@ -44,15 +48,6 @@ Not all statements were reviewed. Reviewed statements include the 300 shortest s
 
 ## ambiguous opt out
 Whether or not the broader impact statement was considered to be an “ambiguous opt out” according to a human reviewer. This variable should be considered along with the “opt out” variable. This variable was necessary as many broader impact statements (especially shorter ones) often opt out while simultaneously making comments on the paper’s broader impact, or make ambiguous distinctions between present and future impacts, direct and indirect impacts, immediate and downstream impacts, etc., discussing one but opting out of discussing the other. 
-
-## manually corrected
-Whether or not the text of the broader impact statement or other variables were manually corrected by a human modifying the data set.
-
-## human review
-Whether or not the text of the broader impact statement or other variables were manually reviewed by a human and confirmed correct, regardless of whether or not a correction was made.
-
-## Image based PDF
-Eight of the 1899 originally downloaded PDFs were image-based and could not be converted to XMLs. They therefore had to be hand coded. Those papers are coded as TRUE for this variable, all others are coded as FALSE.
 
 ## paper title (subjects)
 Variable provided by NeurIPS team, cf. [this dataset](https://docs.google.com/spreadsheets/d/10HHHgXGAwsoeF6XxX0ZTJUAvixMO2NedcHrPnFm6JfQ/edit?usp=sharing).
@@ -81,6 +76,14 @@ Whether a paper has both academic and industry affiliations. Created by matching
 ## country
 The country or countries in which a paper’s affiliations are based. Created by matching affiliations in [this dataset](https://github.com/nd7141/icml2020/blob/master/university2.csv), with heavy cleaning and additions. 
 
+## manually corrected
+Whether or not the text of the broader impact statement or other variables were manually corrected by a human modifying the data set.
+
+## human review
+Whether or not the text of the broader impact statement or other variables were manually reviewed by a human and confirmed correct, regardless of whether or not a correction was made.
+
+## Image based PDF
+Eight of the 1899 originally downloaded PDFs were image-based and could not be converted to XMLs. They therefore had to be hand coded. Those papers are coded as TRUE for this variable, all others are coded as FALSE.
 
 
 # Synonym lists
