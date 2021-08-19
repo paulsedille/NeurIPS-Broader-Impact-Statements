@@ -1,0 +1,24 @@
+variable name,variable source
+paper title (separate scrape),Paper title scraped from the NeurIPS 2020 proceedings website main page.
+paper authors (separate scrape),Paper title scraped from the NeurIPS 2020 proceedings website main page.
+title,Paper title scraped from the PDF papers after XML conversion. (Cf our github for full details.)
+paper identifier,"Paper identifier scraped from the PDF papers’ url on the NeurIPS 2020 proceedings website, based off of this repeated pattern in every paper’s URL: ""[IDENTIFIER]-Paper.pdfx.xml"""
+paper link,Paper URL scraped from the papers’ PDF page on the NeurIPS 2020 proceedings website.
+impact statement,Text of the paper’s broader impact statement scraped from the XML database using the code on this github repository.
+impact title,Title of the paper’s broader impact statement scraped from the XML database using the code on this github repository.
+word count,The word count of the text of the broader impact statement.
+sentence count,"The sentence count of the text of the broader impact statement, obtained using the NLTK package and corrected for miscounts (“e.g. ” and “i.e. ”) using this code."
+opt out,Whether or not the broader impact statement was considered to be an “opt out” (cf. our github page)
+ambiguous opt out,Whether or not the broader impact statement was considered to be an “ambiguous opt out” (cf. our github page).
+paper title (subjects),Variable provided by NeurIPS team.
+primary subject area,Variable provided by NeurIPS team.
+secondary subject areas,Variable provided by NeurIPS team.
+clustering subject preference,Variable provided by NeurIPS team.
+affiliations,Extracted from this dataset.
+academic,"Whether at least one affiliation is an academic institution. Created by matching affiliations in this dataset, with heavy cleaning and additions."
+industry,"Whether at least one affiliation is an industry institution. Created by matching affiliations in this dataset, with heavy cleaning and additions."
+mixed,"Whether a paper has both academic and industry affiliations. Created by matching affiliations in this dataset, with heavy cleaning and additions."
+country,"The country or countries a paper’s affiliations are based in. Created by matching affiliations in this dataset, with heavy cleaning and additions."
+manually corrected,Whether or not the text of the broader impact statement or other variables were manually corrected by a human modifying the data set.
+human review,"Whether or not the text of the broader impact statement or other variables were manually reviewed by a human and confirmed correct, regardless of whether or not a correction was made."
+image based PDF,"Eight of the 1899 originally downloaded PDFs were image-based and could not be converted to XMLs. They therefore had to be hand coded. Those papers are coded as TRUE for this variable, all others are coded as FALSE."
