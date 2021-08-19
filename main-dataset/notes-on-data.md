@@ -2,7 +2,7 @@ Google Sheet version available [here](https://docs.google.com/spreadsheets/d/1pG
 
 # Limitations
 
-This dataset has limitations that should be taken into consideration when using it (see below for details). In particular, the method used to collect broader impact statements involved automated downloads, conversions and scraping and was not error-proof. Although care has been taken to identify and correct as many errors as possible, not all texts have been reviewed by a human. This means it is possible some of the broader impact statements contained in the dataset are truncated or otherwise incorrectly extracted from their original article. 
+This dataset has limitations that should be taken into consideration when using it. In particular, the method used to collect broader impact statements involved automated downloads, conversions and scraping and was not error-proof (see below for details). Although care has been taken to identify and correct as many errors as possible, not all texts have been reviewed by a human. This means it is possible some of the broader impact statements contained in the dataset are truncated or otherwise incorrectly extracted from their original article. 
 
 # Steps taken in creating the variables
 
