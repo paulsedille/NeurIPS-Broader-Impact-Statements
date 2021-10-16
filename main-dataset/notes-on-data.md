@@ -1,4 +1,4 @@
-Google Sheet version available [here](https://docs.google.com/spreadsheets/d/1pG6s1GSp5EsioxBNKygunq6cCuEfsRMBglveLMXDo-c/edit#gid=1937130730).
+Google Sheet version available [here](https://docs.google.com/spreadsheets/d/1pG6s1GSp5EsioxBNKygunq6cCuEfsRMBglveLMXDo-c/edit?usp=sharing).
 
 # Limitations
 
