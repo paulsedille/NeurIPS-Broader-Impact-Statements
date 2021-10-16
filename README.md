@@ -1,6 +1,6 @@
 # NeurIPS-Broader-Impact-Statements
 This is the repository for the "NeurIPS Broader Impact Statements" article, which investigates the benefits and challenges of the [NeurIPS 2020](https://proceedings.neurips.cc/paper/2020) conference requirement that all papers include a broader impact statement.
-We have created a dataset containing the impact statements from all NeurIPS 2020 papers, along with additional information such as affiliation type, location and subject area, and a visualisation tool for exploration. 
+We have created a dataset containing the impact statements from all NeurIPS 2020 papers, along with additional information such as affiliation type, location and subject area, and a [visualisation tool](https://public.flourish.studio/story/961580/) for exploration. 
 
 ## Functions Available
 This repository contains:
